@@ -1,0 +1,12 @@
+to use this, install XAMPP (from https://www.apachefriends.org/download.html). for mac users please dont download the one in this link that ends in "-vm.dmg". download any of the mac ones without that. for windows users any should be fine
+
+After installing: (MAC) go to Applications/XAMPP/xamppfiles/htdocs and drag the ATSPHP2 folder into there
+(WINDOWs) drag the ATSPHP2 into the htdocs folder where you installed xampp, eg C:/xampp/htdocs
+
+To use the DB.
+
+open XAMPP and switch on Apache and MySQL. (for mac i believe the app itself is called manager-osx so click manage servers and start "mySQL database" and "Apache Web Server". )
+
+then go to localhost/phpmyadmin, create a new db called ats and once you click on ats, go to the top and press import. import the ats.sql that is in the folder (same directory as this file).
+
+you can access the actual website by going localhost/atsphp2/templates

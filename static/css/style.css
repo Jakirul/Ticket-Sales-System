@@ -1,0 +1,698 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ********************************************************************************** */
+
+#main-nav {
+    background: #f7f7f7;
+    position: sticky;
+    top: 0;
+    color: #333;
+    z-index: 2;
+}
+#main-nav .contain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#main-nav .contain ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+#main-nav .contain ul li a {
+    padding: 1rem;
+    display: inline-block;
+}
+#main-nav .contain div {
+    justify-self: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* border: 1px solid black; */
+    text-align: center;
+    padding-top: 30px;
+}
+.contain {
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+#showcase {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    position: relative;
+}
+#showcase::before {
+    content: '';
+    background: url(../../static/img/showcase.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+#showcase .showcase-contain {
+    display: grid;
+    min-height: 77.5vh;
+}
+#showcase .showcase-content {
+    z-index: 1;
+    color: #f7f7f7;
+}
+.text-center {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#showcase .showcase-content .blanks {
+    display: flex;
+}
+#showcase .showcase-content a {
+    flex: 1;
+    color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+}
+#showcase .showcase-content a:hover {
+    background: #f7f7f7;
+    color: #333;
+    border-color: #333;
+}
+
+
+.logout {
+    font-size: 1rem;
+}
+.present {
+    border-bottom: 1px solid #000;
+}
+/* ********************************************************************************** */
+
+/* Login */
+#header {
+    display: flex;
+}
+#header .side1 {
+    display: flex;
+    flex: 1;
+    background: #2b59a2;
+    font-size: 15rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+}
+#header .side2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 2;
+    margin: 2rem auto;
+    /* max-width: 400px; */
+
+
+}
+/* Form */
+.form-wrap {
+    /* background: #2b59a2; */
+    padding: 15px 25px;
+}
+.form-wrap h1,
+.form-wrap p {
+    text-align: center;
+}
+.form-wrap .form-group {
+    margin-top: 15px;
+}
+.form-wrap .form-group label {
+    display: block;
+}
+.form-wrap .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+.form-wrap button {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    background: #2b59a2;
+}
+.form-wrap button:hover {
+    background: #fff;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    padding: 1rem;
+}
+
+
+/* Navigation */
+#navbar {
+    background: #2b59a2;
+    padding-top: 3rem;
+    height: 12.3rem;
+
+}
+#navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+#navbar ul li {
+    margin: 0 4rem;
+}
+#navbar ul li .icon {
+    font-size: 4rem;
+}
+#navbar ul li .name {
+    text-align: center;
+}
+#navbar ul li .icon a:hover {
+    color: azure;
+}
+#navbar ul li .icon a.current {
+    color: azure;
+}
+#main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 224px);
+    align-items: center;
+}
+#main-section .icon{
+    font-size: 10rem;
+}
+#main-section .name{
+    font-size: 3rem;
+}
+#section ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    height: calc(100vh - 224px);
+}
+#section ul .icon {
+    font-size: 8rem;
+}
+#section ul .name {
+    text-align: center;
+}
+#section ul .name .res{
+    color: red
+}
+
+#section .box {
+    background: #0e74f6;
+    color: #fff;
+    padding: 2rem;
+}
+#section .box a {
+    color: #fff;
+}
+
+
+/* back button design */
+/*#commissionbutton1, #assignblankbutton1, #assignedblankbutton1, #accessreportbutton1, #customerstatusbutton1, #blanks2button1, #discountbutton1, #removecommissionbutton1,*/
+/*#setcommissionbutton1, #generatereportbutton1, #sellticketbutton1, #cancelticketbutton1, #latepaymentbutton1, #createcustaccbutton1, #tickettypelist1, #tasignupbutton1,*/
+/*#OMDetailbutton1, #TADetailbutton1{*/
+#backbutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+/* home button design */
+/*#assignblankbutton2, #assignedblankbutton2, #accessreportbutton2, #customerstatusbutton2, #discountbutton2, #removecommissionbutton2, #setcommissionbutton2, #generatereportbutton2*/
+/*, #sellticketbutton2, #cancelticketbutton2, #latepaymentbutton2, #createcustaccbutton2, #tickettypelist2, #tasignupbutton2, #OMDetailbutton2, #TADetailbutton2 {*/
+#homebutton {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+/*h1 tags for the title */
+/*.blanks2h1, .accessreporth1, .customerstatush1, .commissionh1, .assignblankh1, .assignedblankh1, .setcommissionh1, .removecommissionh1, .discounth1, .generatereporth1*/
+/*, .sellticketh1, .cancelticketh1, .latepaymenth1, .createcustacch1, .tickettypelisth1, .tasignuph1, .OMDetailh1, .TADetailh1 {*/
+
+.pageheader {
+    color: black;
+    text-align: center;
+    font-size:50px;
+    margin: 0.5em 0 auto 0;
+
+
+}
+
+
+#setCommissionBtn,#setCommissionBtn2 {
+    width: 300px;
+    height: 100px;
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-right: 15rem;
+
+
+}
+
+
+#removeCommissionBtn {
+    width: 300px;
+    height: 100px;
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.wrapper {
+    display:flex;
+    justify-content: center;
+    margin-top: 20rem;
+
+}
+
+form, label, input {
+    margin:0;
+
+
+}
+
+/* Code for the blue buttons that show beneath the icons */
+#blanks1,#cancelTicket, #sellTicket, #customerbutton, #customerstatusbutton, #accessreportbutton, #generatereportbutton, #paylatebutton, #discountbutton,
+#commissionbutton, #recordpaymentbutton, #backupbutton, #tickettypebutton, #restorebutton, #TADetailsbutton, #backupbutton2, #restorebutton2, #OMDetailsbutton, #logout, #logoutbtn2,
+#accountlist, #cancelticket  {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+form {
+    text-align: left;
+    font-size: 15px;
+
+}
+
+#individualtable th {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#individualtable td {
+    text-align: center;
+}
+
+.center {
+
+
+    width: 55rem;
+    margin-left: 30rem;
+    margin-right: auto;
+    margin-top: 100px;
+
+}
+
+
+.center2 {
+
+    display: inline-block;
+
+}
+
+#assignBlankbtn2 {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+  
+    font-size: 16px;
+    cursor: pointer;
+
+    /*If you want the submit button in the center, use these two lines of code */
+    margin-left: 47rem;
+    margin-top: 15px;
+
+    /*If you want the submit button in the bottom right corner, use these 3 lines of code and uncomment the 2 above */
+    /* position: absolute;
+    right:    10px;
+    bottom:   10px; */
+}
+  
+
+#submit,#submit1 {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+    /*If you want the submit button in the center, use these two lines of code */
+    margin-left: 50rem;
+    margin-top: 15px;
+
+    /*If you want the submit button in the bottom right corner, use these 3 lines of code and uncomment the 2 above */
+    /* position: absolute;
+    right:    10px;
+    bottom:   10px; */
+
+}
+
+/* drop down box design */
+#customerstatus, #customerid, #reporttype, #blanktype, #tickettype, #discounttype {
+    max-width: 90%;
+    max-height: 50%;
+    width: 200px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* For Sell Ticket Page */
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+#print {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Style the container */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+
+}
+
+.col-75-email {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+/* Pop up box in the database page */
+
+/* The Modal (background) */
+.modal, .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 120px; /* Location of the box */
+  
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content, .modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+  
+}
+
+/* The Close Button */
+.close, .close2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus, .close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+footer {
+    background-color: #86939E;
+    margin-top:calc(5% + 60px);
+    padding: 5px;
+}
+
+
+
+
+
+/* Sign Up Box Starts Here */
+.container {
+    width: 660px;
+    position: relative;
+    margin: 0 auto; }
+
+.signup-content {
+    background: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 50px 85px; }
+
+
+.form-group {
+    overflow: hidden;
+    margin-bottom: 20px; }
+
+.form-input {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 17px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222; }
+
+
+.form-submit {
+    width: 100%;
+    border-radius: 5px;
+    padding: 17px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    background-image: -webkit-linear-gradient(to left, #74ebd5, #9face6);
+    background-image: linear-gradient(to left, #74ebd5, #9face6); }
+
+
+.loginhere-link {
+    font-weight: 700;
+    color: #222; }
+
+
+
+
+
+
+
+
+
+/* Registration Starts Here */
+
+#container {
+    margin: 30px auto;
+    max-width: 30rem;
+
+}
+.form-wrap {
+    background: #fff;
+    padding: 15px 25px;
+    color: #333;
+}
+.form-wrap h1,
+.form-wrap p {
+    text-align: center;
+}
+.form-wrap .form-group {
+    margin-top: 15px;
+}
+.form-wrap .form-group label {
+    display: block;
+    color: #666;
+}
+.form-wrap .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+.form-wrap button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #49c1a2;
+    color: #fff;
+    cursor: pointer;
+
+}
+.form-wrap button:hover {
+    background: #37a08e
+}
+.form-wrap .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    margin-top: 10px;
+}
+footer a {
+    color:#49c1a2
+}
+
+/* Regisration Ends Here */
+
